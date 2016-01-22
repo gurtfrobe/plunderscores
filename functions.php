@@ -99,8 +99,8 @@ add_action( 'after_setup_theme', '_s_content_width', 0 );
  */
 function _s_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', '_s' ),
-		'id'            => 'sidebar-1',
+		'name'          => esc_html__( 'Primary Sidebar', '_s' ),
+		'id'            => 'sidebar-primary',
 		'description'   => '',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
