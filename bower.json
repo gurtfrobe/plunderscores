@@ -1,0 +1,22 @@
+{
+  "name": "plunderscores",
+  "version": "1.0.0",
+  "authors": [
+    "Matt Bohea <matt@mattbohea.com>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bohea-sass-tools": "*",
+    "bourbon": "~4.2.6"
+  }
+}
