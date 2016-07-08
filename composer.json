@@ -1,5 +1,6 @@
 {
     "name": "gurtfrobe/plunderscores",
     "description": "Plunderscores",
-    "type": "wordpress-theme"
+    "type": "wordpress-theme",
+    "version": "1.0.0"
 }
