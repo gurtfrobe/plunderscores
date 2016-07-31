@@ -1,5 +1,9 @@
 {
     "name": "gurtfrobe/plunderscores",
-    "description": "Plunderscores",
-    "type": "wordpress-theme"
+    "description": "Fork of the _s theme by Automattic.",
+    "authors":[
+        {
+            "name":"Matt Bohea"
+        }
+    ]
 }
