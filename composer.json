@@ -3,7 +3,8 @@
     "description": "Fork of the _s theme by Automattic.",
     "type": "wordpress-theme",
     "require": {
-        "composer/installers": "~1.0"
+        "composer/installers": "~1.0",
+        "bower-asset/modernizr": "*"
     },
     "authors":[
         {
