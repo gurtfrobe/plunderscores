@@ -3,12 +3,19 @@
     "description": "Fork of the _s theme by Automattic.",
     "type": "wordpress-theme",
     "require": {
-        "composer/installers": "~1.0",
-        "bower-asset/modernizr": "*"
+        "composer/installers": "~1.0"
     },
     "authors":[
         {
             "name":"Matt Bohea"
         }
-    ]
+    ],
+    "scripts": {
+      "post-install-cmd": [
+        "bower install"
+      ],
+      "post-update-cmd": [
+        "bower install"
+      ]
+    }
 }
