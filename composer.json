@@ -1,6 +1,10 @@
 {
     "name": "gurtfrobe/plunderscores",
     "description": "Fork of the _s theme by Automattic.",
+    "type": "wordpress-theme",
+    "require": {
+        "composer/installers": "~1.0"
+    },
     "authors":[
         {
             "name":"Matt Bohea"
