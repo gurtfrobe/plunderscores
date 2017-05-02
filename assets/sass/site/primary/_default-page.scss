@@ -1,0 +1,36 @@
+.page-content__content,
+.page-content__image {
+	@media #{$medium-up}{
+		margin-top: 20px;
+	}
+	@media #{$large-up}{
+		margin-top: 50px;
+	}
+}
+
+.page-content__content {
+
+	.page-content__heading {
+		margin-top: 0;
+	}
+
+	@media #{$medium-up}{
+		float: left;
+		margin-right: 5%;
+		width: 50%;
+	}
+}
+
+.page-content__image {
+	@media #{$medium-up}{
+		float: right;
+		width: 45%;
+	}
+
+	img {
+		display: block;
+		height: auto;
+		width: 100%;
+	}
+
+}

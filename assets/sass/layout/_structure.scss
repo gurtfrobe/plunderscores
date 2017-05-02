@@ -1,0 +1,14 @@
+#page {
+  transition: padding $animation-speed;
+}
+
+.container {
+  @include grid-container($include-column-gutter: false);
+}
+
+.column-offset__wrap {
+  @media #{$medium-up}{
+    margin-left: -$outer-gutter;
+    display: flex;
+  }
+}

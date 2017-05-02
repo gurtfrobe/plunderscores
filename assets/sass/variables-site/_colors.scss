@@ -1,0 +1,43 @@
+// Brand colours
+$c_b_yellow: #FDE332;
+
+// Common colours
+$c_white: #fff;
+$c_black: #0d0d0d;
+$c_grey: #eee;
+$c_grey-light: #F8F8F8;
+$c_grey-dark: #2d2d2d;
+$c_red: #e51818;
+$c_green: #22ab10;
+
+// Backgrounds
+$color__background-body: $c_white;
+$c__bg-grey: $c_grey-light;
+
+// Text
+$color__text-main: #121212;
+$color__text-input: $color__text-main;
+$color__text-input-focus: $color__text-main;
+
+// Links
+$color__link: $c_b_yellow;
+$color__link-visited: $color__link;
+$color__link-hover: $color__link;
+
+// Borders
+$c_border: #eaeaea;
+
+// Original _s colours
+$color__background-pre: #eee;
+$color__background-screen: #f1f1f1;
+$color__background-hr: #ccc;
+$color__background-button: #e6e6e6;
+$color__background-ins: #fff9c0;
+
+$color__text-screen: #21759b;
+
+$color__border-button: #ccc #ccc #bbb;
+$color__border-button-hover: #ccc #bbb #aaa;
+$color__border-button-focus: #aaa #bbb #bbb;
+$color__border-input: $c_border;
+$color__border-abbr: $c_border;

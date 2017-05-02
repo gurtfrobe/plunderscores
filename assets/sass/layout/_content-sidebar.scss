@@ -1,0 +1,26 @@
+.content-sidebar-wrap {
+  margin: $spacer 0;
+
+  @media #{$medium-up} {
+    margin: ($spacer * 3) 0;
+  }
+
+  .content-area {
+    @media #{$medium-up}{
+      width: 61.6%;
+      margin-right: 5%;
+      float: left;
+    }
+  }
+
+  .widget-area {
+    margin-top: $spacer * 3;
+
+    @media #{$medium-up}{
+      width: 33.3%;
+      float: right;
+      margin-top: 0;
+    }
+  }
+
+}

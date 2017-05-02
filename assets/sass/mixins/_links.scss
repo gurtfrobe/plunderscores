@@ -1,0 +1,19 @@
+@mixin inverse-text-link($color: $c_b_green){
+  color: $color;
+  text-decoration: underline;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+@mixin subtle-text-link($color: $color__text-main){
+  color: $color;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $c_b_green;
+  }
+}

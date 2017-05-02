@@ -1,0 +1,50 @@
+$small-breakpoint: 480px;
+$medium-breakpoint: 768px;
+$large-breakpoint: 990px;
+
+$extra-small-range: (0, $small-breakpoint - 1);
+$small-range: (0, $medium-breakpoint - 1);
+$medium-range: ($medium-breakpoint, $large-breakpoint - 1);
+$large-range: ($large-breakpoint, 9999px);
+
+$column-gutter-small: 20px;
+$column-gutter-medium: 10px;
+$column-gutter-large: 20px;
+$column-gutter: $column-gutter-large;
+$gutter: $column-gutter;
+
+$outer-gutter-large: 20px;
+$outer-gutter-medium: 20px;
+$outer-gutter-small: 20px;
+$outer-gutter: $outer-gutter-large;
+
+$mobile-content-gutter: $outer-gutter-small;
+
+$container-width: 1140px;
+
+$row-width: $container-width + $outer-gutter*2;
+
+$ms-extra-small-max: nth($extra-small-range, 2);
+$mq-small-min: nth($small-range, 1);
+$mq-small-max: nth($small-range, 2);
+$mq-medium-min: nth($medium-range, 1);
+$mq-medium-max: nth($medium-range, 2);
+$mq-large-min: nth($large-range, 1);
+$mq-large-max: nth($large-range, 2);
+
+$screen: "only screen";
+$extra-small-only: "#{$screen} and (max-width: #{$ms-extra-small-max})";
+$small-up: "#{$screen} and (min-width:#{$mq-small-min})";
+$small-only: "#{$screen} and (max-width: #{$mq-small-max})";
+$medium-up: "#{$screen} and (min-width:#{$mq-medium-min})";
+$medium-only: "#{$screen} and (min-width:#{$mq-medium-min}) and (max-width:#{$mq-medium-max})";
+$large-up: "#{$screen} and (min-width:#{$mq-large-min})";
+$large-only: "#{$screen} and (min-width:#{$mq-large-min}) and (max-width:#{$mq-large-max})";
+
+$susy: (
+	gutter-position: inside,
+	columns: 12,
+	gutters: 0,
+	container: $row-width,
+	global-box-sizing: border-box
+);

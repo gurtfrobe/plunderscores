@@ -17,6 +17,9 @@
   ],
   "dependencies": {
     "bohea-sass-tools": "*",
-    "bourbon": "~4.2.6"
+    "bourbon": "~4.2.6",
+    "slick-carousel": "^1.6.0",
+    "select2": "^4.0.3",
+    "magnific-popup": "^1.1.0"
   }
 }

@@ -1,0 +1,113 @@
+.site-header {
+	@extend %clearfix;
+	background: $c_grey-dark;
+	width: 100%;
+
+	.home & {
+		@media #{$large-up}{
+			background: linear-gradient(to bottom, rgba(23,22,20,1) 0%,rgba(23,22,20,0) 100%);
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 10;
+		}
+	}
+
+	.container {
+		padding: {
+			top: 20px;
+			left: 0;
+			right: 0;
+		}
+		position: relative;
+
+		@media #{$large-up}{
+			@include grid-container($include-column-gutter: false);
+			padding-top: 0;
+		}
+
+	}
+
+}
+
+.site-branding {
+  background: url('assets/images/logo-mercator.svg') 0 0 no-repeat;
+  background-size: contain;
+  display: block;
+  height: 21px;
+  width: 160px;
+
+  @media #{$large-up}{
+  	height: 26px;
+  	width: 195px;
+	}
+
+  a {
+    display: block;
+  	height: 26px;
+    width: 195px;
+  }
+
+  span {
+    display: none;
+  }
+
+}
+
+.site-branding--header {
+  margin: 0 auto 20px;
+
+  @media #{$large-up}{
+  	float: left;
+  	margin: 35px 35px 0 0;
+	}
+}
+
+.menu-trigger,
+.search-trigger--mobile {
+	cursor: pointer;
+	display: block;
+	position: absolute;
+	top: 20px;
+
+	@media #{$large-up}{
+		display: none;
+	}
+
+	svg {
+		fill: $c_white;
+	}
+
+}
+
+.menu-trigger {
+	left: 20px;
+	height: 18px;
+	width: 18px;
+
+	svg {
+		height: 18px;
+		width: 18px;
+	}
+
+}
+
+.search-trigger--mobile {
+	right: 20px;
+	height: 14px;
+	width: 14px;
+
+	svg {
+		height: 14px;
+		width: 14px;
+	}
+
+}
+
+.search-trigger--desktop {
+	display: none;
+	@media #{$large-up}{
+		display: block;
+	}
+}

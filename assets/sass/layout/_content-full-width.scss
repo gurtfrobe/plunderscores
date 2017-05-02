@@ -1,0 +1,8 @@
+.content-fullwidth-wrap {
+  margin: $spacer 0;
+
+  @media #{$medium-up} {
+    margin: ($spacer * 3) 0;
+  }
+
+}

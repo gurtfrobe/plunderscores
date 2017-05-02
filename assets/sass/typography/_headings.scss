@@ -1,0 +1,21 @@
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	color: $c_grey-dark;
+	font-weight: 800;
+}
+
+h1 {
+	font-size: 32px;
+	font-weight: 300;
+	line-height: 1.2;
+
+	@media #{$medium-up}{
+		font-size: 42px;
+	}
+
+	@media #{$large-up}{
+		font-size: 52px;
+	}
+
+}
+

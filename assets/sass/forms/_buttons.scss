@@ -1,0 +1,91 @@
+@mixin button($color: $c_b_yellow, $size: default) {
+	background: $color;
+	border: 1px solid;
+	border-color: $color;
+	border-radius: 0;
+	color: $c_black;
+	cursor: pointer;
+	display: inline-block;
+	font-family: $font__main;
+	font-weight: 800;
+	line-height: 1;
+	padding: .8em 1.5em .7em;
+	text-align: center;
+	text-decoration: none;
+	transition: all $animation-speed;
+
+	&:visited {
+		color: $c_black;
+	}
+
+	@if $size == large {
+		font-size: ms(1);
+
+	  @media #{$small-only} {
+	    font-size: ms(0);
+	  }
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: none;
+		outline: none;
+		color: $c_white;
+		background: $c_black;
+		border-color: $c_black;
+	}
+
+	&:disabled {
+		opacity: .3;
+
+		&:hover,
+		&:active,
+		&:focus {
+			background: $color;
+			border-color: $color;
+		}
+
+	}
+
+}
+
+// secondary button
+@mixin button-secondary($color: $c_b_yellow, $size: default) {
+	@include button($color, $size);
+	background: transparent;
+	border-width: 2px;
+	color: $color;
+
+	&:visited {
+		color: $color;
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: $c_white;
+		background: $color;
+		border-color: $color;
+	}
+
+	&:disabled {
+
+		&:hover,
+		&:active,
+		&:focus {
+			background: transparent;
+			border-color: $color;
+		}
+
+	}
+
+}
+
+.btn,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	@include button($c_b_yellow);
+}

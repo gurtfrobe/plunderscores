@@ -1,0 +1,187 @@
+%menu {
+	@include reset-list;
+
+	@media #{$large-up}{
+		display: flex;
+	}
+
+	> li { // top level links
+		position: relative;
+		text-align: center;
+
+		@media #{$large-up}{
+			padding: 40px 0;
+			text-align: left;
+		}
+	}
+
+	li + li {
+		margin-top: $spacer / 2;
+		@media #{$large-up}{
+			margin-left: $spacer;
+			margin-top: 0;
+		}
+	}
+
+	a {
+		color: $c_white;
+		font-weight: 700;
+		text-decoration: none;
+
+		&::after {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 0;
+			background: $c_b_yellow;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			transition: all $animation-speed;
+		}
+
+		&:hover {
+			&::after {
+				height: 7px;
+			}
+		}
+
+	}
+
+	.current_page_item,
+	.current_page_ancestor {
+		a::after {
+			height: 7px;
+		}
+	}
+
+	svg {
+		fill: $c_white;
+		transform: translateY(1px);
+	}
+
+}
+
+.navigation__close {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	fill: $c_white;
+
+	@media #{$large-up}{
+		display: none;
+	}
+
+	svg {
+		width: 14px;
+		height: 14px;
+	}
+
+}
+
+.navigation-wrap {
+	background: $c_grey-dark;
+	position: fixed;
+	left: -100%;
+	top: 0;
+	bottom: 0;
+	padding-top: 50px;
+	width: 100%;
+	max-width: 375px;
+	transition: left $animation-speed;
+	z-index: 999;
+
+	@media #{$large-up}{
+		display: block;
+		padding-top: 0;
+		position: relative;
+		left: auto;
+		max-width: 100%;
+		z-index: 0;
+	}
+
+	&.is-active {
+		left: 0;
+	}
+
+}
+
+.main-navigation {
+	margin-bottom: $spacer * 2;
+
+	@media #{$large-up}{
+		float: left;
+		margin-bottom: 0;
+	}
+
+	.menu {
+		@extend %menu;
+	}
+
+}
+
+.utility-navigation--desktop {
+	@media #{$large-up}{
+		float: right;
+	}
+
+	.menu {
+		@extend %menu;
+	}
+
+}
+
+.utility-navigation--mobile {
+
+	ul {
+		@include reset-list;
+		display: flex;
+	}
+
+	li {
+		flex: 1 0 auto;
+	}
+
+	a {
+		background: $c_grey-light;
+		border: 1px solid $c_grey;
+		color: $color__text-main;
+		display: block;
+		font-size: 14px;
+		padding: 14px 0;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	@media #{$large-up}{
+		display: none;
+	}
+
+	svg {
+		transform: translateY(2px);
+	}
+
+}
+
+
+// page content nav
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}

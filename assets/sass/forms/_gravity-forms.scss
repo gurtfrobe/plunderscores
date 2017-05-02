@@ -1,0 +1,103 @@
+.gform_fields {
+	@include reset-list;
+}
+
+.gfield {
+	@extend %clearfix;
+	margin-bottom: $spacer / 2;
+
+	@media #{$medium-up}{
+		margin-bottom: $spacer;
+	}
+}
+
+.gfield_label {
+	margin-bottom: $spacer / 4;
+	display: block;
+	font-weight: 700;
+
+	@media #{$medium-up}{
+		width: 33.3%;
+		float: left;
+		padding-right: 2%;
+		margin-bottom: 0;
+		display: inline;
+		font-weight: 400;
+	}
+}
+
+.gfield_required {
+	color: $c_red;
+	margin-left: .25em;
+}
+
+.ginput_container {
+	@media #{$medium-up}{
+		width: 66.6%;
+		float: right;
+	}
+}
+
+.gfield_description {
+	clear: both;
+	text-align: right;
+	font-size: ms(-1);
+	padding-top: $spacer / 4;
+}
+
+.gform_footer {
+	margin-top: $spacer * 2;
+
+	@media #{$medium-up} {
+		text-align: right;
+	}
+
+	input[type=submit] {
+		font-size: ms(0);
+
+		@media #{$small-only} {
+			display: block;
+			width: 100%;
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+// validation
+.gform_validation_container { // anti-spam honey pot
+	display: none !important;
+	position: absolute;
+	left: -9000px;
+}
+
+.validation_error {
+	margin-bottom: 20px;
+	font-weight: 700;
+	color: $c_red;
+}
+
+.gfield_error {
+	input,
+	textarea,
+	select,
+	.select2-selection--single {
+		border-color: $c_red;
+	}
+}
+
+.validation_message {
+	color: $c_red;
+}
+
+.gform_confirmation_message {
+	background: url('assets/images/icons/icon-checkmark--white.svg') 0 3px no-repeat;
+	background-size: 14px;
+	color: $c_white;
+	display: inline-block;
+	font-weight: 700;
+	margin: 30px auto 50px;
+	padding-left: 20px;
+}
